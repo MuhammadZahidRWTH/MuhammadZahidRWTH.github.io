@@ -1,173 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Muhammad Zahid – AI Engineer & Data Scientist</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            color: #1a73e8;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        ul {
-            margin-top: 5px;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 40px 0;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Muhammad Zahid – AI Engineer & Data Scientist</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Navigation */
+  nav {
+    background: #1a73e8;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  }
+  nav ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  nav ul li a:hover,
+  nav ul li a:focus {
+    background: #155ab6;
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 40px;
+    scroll-margin-top: 70px; /* for smooth scroll offset with sticky nav */
+  }
+  h1, h2, h3 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+  }
+  ul {
+    margin-top: 5px;
+  }
+
+  /* Contact info */
+  .contact-info p {
+    margin: 5px 0;
+  }
+  a {
+    color: #1a73e8;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px 0;
+    color: #666;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li a {
+      padding: 12px 15px;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Muhammad Zahid</h1>
-        <div class="contact-info">
-            <p>Kastanienweg 4, 52074 Aachen, Germany</p>
-            <p>Phone: +49 176 37570307</p>
-            <p>Email: <a href="mailto:muh.zahidsaeed@gmail.com">muh.zahidsaeed@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-zahid-772206258" target="_blank" rel="noopener noreferrer">Muhammad Zahid</a></p>
-            <p>GitHub: <a href="https://github.com/MuhammadZahidRWTH" target="_blank" rel="noopener noreferrer">MuhZahid</a></p>
-        </div>
-    </header>
 
-    <section>
-        <h2>Profile</h2>
-        <p>AI Engineer and Data Scientist with 3+ years of experience building scalable <strong>Generative AI</strong> and <strong>Large Language Model (LLM)</strong> applications. Skilled in deploying production-ready AI solutions, including ChatGPT-powered systems, with a strong foundation in research and industry collaboration.</p>
-        <p>Currently working as an ML/AI Assistant at RWTH Aachen's WZL Lab, focused on industrial AI research with few-shot and semi-supervised learning. Recently completed an MSc in Data Science at RWTH Aachen University.</p>
-        <p>Expertise spans PyTorch, cloud-native MLOps, LangChain, FastAPI, and scalable AI deployment in cloud environments.</p>
-    </section>
+<nav>
+  <ul>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#languages">Languages</a></li>
+    <li><a href="#research">Research</a></li>
+  </ul>
+</nav>
 
-    <section>
-        <h2>Skills & Tools</h2>
-        <h3>Generative AI & LLMs</h3>
-        <ul>
-            <li>LLM Systems: Agentic AI, multi-agent coordination, RAG pipelines, LangChain, LangGraph, Hugging Face</li>
-            <li>Prompting: Few-shot, Chain-of-Thought (CoT), tool-augmented prompts, OpenAI APIs, semantic search with FAISS, Pinecone</li>
-            <li>Fine-tuning: LoRA, PEFT, RLHF; evaluation metrics including BLEU, ROUGE, perplexity; hallucination & bias detection</li>
-            <li>Deployment: FastAPI, model quantization, latency optimization</li>
-        </ul>
-        <h3>Machine Learning & NLP</h3>
-        <ul>
-            <li>Models: Transformers (BERT, T5), autoencoders, transfer learning</li>
-            <li>Azure AI Services: Azure OpenAI, Cognitive Services, Azure ML Studio</li>
-            <li>Microsoft Fabric: One Lake, Dataflows Gen2, Pipelines</li>
-            <li>Libraries: PyTorch, TensorFlow, scikit-learn, spaCy, NLTK, Matlab</li>
-        </ul>
-        <h3>Data Engineering & MLOps</h3>
-        <ul>
-            <li>Pipelines: PySpark ETL/ELT, Airflow, Azure Data Factory, Databricks</li>
-            <li>Cloud & Operations: Docker, Kubernetes, Azure; CI/CD with GitHub Actions, MLflow, Weights & Biases</li>
-            <li>Data Handling & Visualization: Pandas, NumPy, SQL, Seaborn, Plotly, Tableau, Power BI</li>
-        </ul>
-        <h3>Programming</h3>
-        <ul>
-            <li>Languages: Python (expert), SQL, Java, R</li>
-            <li>Frameworks & APIs: OpenAI, LangChain, FastAPI</li>
-        </ul>
-    </section>
+<div class="container">
+  <header>
+    <h1>Muhammad Zahid</h1>
+    <div class="contact-info">
+      <p>Kastanienweg 4, 52074 Aachen, Germany</p>
+      <p>Phone: +49 176 37570307</p>
+      <p>Email: <a href="mailto:muh.zahidsaeed@gmail.com">muh.zahidsaeed@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-zahid-772206258" target="_blank" rel="noopener noreferrer">Muhammad Zahid</a></p>
+      <p>GitHub: <a href="https://github.com/MuhammadZahidRWTH" target="_blank" rel="noopener noreferrer">MuhZahid</a></p>
+    </div>
+  </header>
 
-    <section>
-        <h2>Experience</h2>
-        <h3>ML / AI Assistant</h3>
-        <p><em>WZL Lab, RWTH Aachen, Germany | Oct 2024 – Present</em></p>
-        <ul>
-            <li>Improved product quality prediction through semi-supervised learning on sensor data</li>
-            <li>Developed PySpark ETL workflows and automated pipelines using Airflow</li>
-            <li>Supported academic research on industrial AI applications</li>
-        </ul>
+  <section id="profile">
+    <h2>Profile</h2>
+    <p>AI Engineer and Data Scientist with 3+ years of experience building scalable <strong>Generative AI</strong> and <strong>Large Language Model (LLM)</strong> applications. Skilled in deploying production-ready AI solutions, including ChatGPT-powered systems, with a strong foundation in research and industry collaboration.</p>
+    <p>Currently working as an ML/AI Assistant at RWTH Aachen's WZL Lab, focused on industrial AI research with few-shot and semi-supervised learning. Recently completed an MSc in Data Science at RWTH Aachen University.</p>
+    <p>Expertise spans PyTorch, cloud-native MLOps, LangChain, FastAPI, and scalable AI deployment in cloud environments.</p>
+  </section>
 
-        <h3>ML Assistant</h3>
-        <p><em>Institute for Machine Elements, RWTH Aachen, Germany | Jun 2024 – Sep 2024</em></p>
-        <ul>
-            <li>Built ML models for predictive maintenance of rotating machinery using sensor data</li>
-            <li>Designed lightweight monitoring framework to reduce downtime and improve maintenance planning</li>
-            <li>Validated models with mechanical engineering teams for real-world reliability</li>
-        </ul>
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <h3>Generative AI & LLMs</h3>
+    <ul>
+      <li>LLM Systems: Agentic AI, multi-agent coordination, RAG pipelines, LangChain, LangGraph, Hugging Face</li>
+      <li>Prompting: Few-shot, Chain-of-Thought (CoT), tool-augmented prompts, OpenAI APIs, semantic search with FAISS, Pinecone</li>
+      <li>Fine-tuning: LoRA, PEFT, RLHF; evaluation metrics including BLEU, ROUGE, perplexity; hallucination & bias detection</li>
+      <li>Deployment: FastAPI, model quantization, latency optimization</li>
+    </ul>
+    <h3>Machine Learning & NLP</h3>
+    <ul>
+      <li>Models: Transformers (BERT, T5), autoencoders, transfer learning</li>
+      <li>Azure AI Services: Azure OpenAI, Cognitive Services, Azure ML Studio</li>
+      <li>Microsoft Fabric: One Lake, Dataflows Gen2, Pipelines</li>
+      <li>Libraries: PyTorch, TensorFlow, scikit-learn, spaCy, NLTK, Matlab</li>
+    </ul>
+    <h3>Data Engineering & MLOps</h3>
+    <ul>
+      <li>Pipelines: PySpark ETL/ELT, Airflow, Azure Data Factory, Databricks</li>
+      <li>Cloud & Operations: Docker, Kubernetes, Azure; CI/CD with GitHub Actions, MLflow, Weights & Biases</li>
+      <li>Data Handling & Visualization: Pandas, NumPy, SQL, Seaborn, Plotly, Tableau, Power BI</li>
+    </ul>
+    <h3>Programming</h3>
+    <ul>
+      <li>Languages: Python (expert), SQL, Java, R</li>
+      <li>Frameworks & APIs: OpenAI, LangChain, FastAPI</li>
+    </ul>
+  </section>
 
-        <h3>AI Engineer</h3>
-        <p><em>Aixigo AG, Aachen, Germany | Jun 2023 – Jun 2024</em></p>
-        <ul>
-            <li>Developed ChatGPT-based customer service systems, improving response time and user satisfaction</li>
-            <li>Optimized LLM inference pipelines with Retrieval-Augmented Generation (RAG) and model quantization</li>
-            <li>Automated data analytics workflows using Databricks, improving BI query performance</li>
-            <li>Deployed AI solutions on Docker/Kubernetes clusters with cloud-native high availability</li>
-        </ul>
+  <section id="experience">
+    <h2>Experience</h2>
+    <h3>ML / AI Assistant</h3>
+    <p><em>WZL Lab, RWTH Aachen, Germany | Oct 2024 – Present</em></p>
+    <ul>
+      <li>Improved product quality prediction through semi-supervised learning on sensor data</li>
+      <li>Developed PySpark ETL workflows and automated pipelines using Airflow</li>
+      <li>Supported academic research on industrial AI applications</li>
+    </ul>
 
-        <h3>Software Developer</h3>
-        <p><em>#HashmakerSolutions, Lahore, Pakistan | May 2016 – Jul 2020</em></p>
-        <ul>
-            <li>Built and optimized ETL pipelines and real-time SQL queries</li>
-            <li>Improved system speed and API performance through optimizations</li>
-            <li>Documented RESTful APIs with Swagger to enhance development workflows</li>
-        </ul>
-    </section>
+    <h3>ML Assistant</h3>
+    <p><em>Institute for Machine Elements, RWTH Aachen, Germany | Jun 2024 – Sep 2024</em></p>
+    <ul>
+      <li>Built ML models for predictive maintenance of rotating machinery using sensor data</li>
+      <li>Designed lightweight monitoring framework to reduce downtime and improve maintenance planning</li>
+      <li>Validated models with mechanical engineering teams for real-world reliability</li>
+    </ul>
 
-    <section>
-        <h2>Education</h2>
-        <p><strong>M.Sc. Data Science</strong>, RWTH Aachen University, Germany (2020 – 2025)</p>
-        <p>Relevant courses: Machine Learning, Database Systems, Big Data Analytics</p>
-        <p><strong>B.Sc. Computer Science (Dual Degree)</strong>, COMSATS University, Pakistan & Lancaster University, UK (2011 – 2015)</p>
-        <p>Relevant courses: Algorithms, DBMS, Artificial Intelligence</p>
-    </section>
+    <h3>AI Engineer</h3>
+    <p><em>Aixigo AG, Aachen, Germany | Jun 2023 – Jun 2024</em></p>
+    <ul>
+      <li>Developed ChatGPT-based customer service systems, improving response time and user satisfaction</li>
+      <li>Optimized LLM inference pipelines with Retrieval-Augmented Generation (RAG) and model quantization</li>
+      <li>Automated data analytics workflows using Databricks, improving BI query performance</li>
+      <li>Deployed AI solutions on Docker/Kubernetes clusters with cloud-native high availability</li>
+    </ul>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Predictive Maintenance (TensorFlow):</strong> Sensor data-driven failure prediction models</li>
-            <li><strong>AI Customer Support (ChatGPT + FastAPI):</strong> Real-time LLM integration for customer service</li>
-            <li><strong>COVID-19 Dashboard (Tableau + Python):</strong> Real-time visualization of public health data</li>
-        </ul>
-    </section>
+    <h3>Software Developer</h3>
+    <p><em>#HashmakerSolutions, Lahore, Pakistan | May 2016 – Jul 2020</em></p>
+    <ul>
+      <li>Built and optimized ETL pipelines and real-time SQL queries</li>
+      <li>Improved system speed and API performance through optimizations</li>
+      <li>Documented RESTful APIs with Swagger to enhance development workflows</li>
+    </ul>
+  </section>
 
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Microsoft Azure AI Fundamentals: Generative AI — March 2025</li>
-            <li>AI Workshop, Aixigo AG, Aachen — Feb 2024</li>
-            <li>Master SQL for Data Science — Udemy, 2022</li>
-        </ul>
-    </section>
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>M.Sc. Data Science</strong>, RWTH Aachen University, Germany (2020 – 2025)</p>
+    <p>Relevant courses: Machine Learning, Database Systems, Big Data Analytics</p>
+    <p><strong>B.Sc. Computer Science (Dual Degree)</strong>, COMSATS University, Pakistan & Lancaster University, UK (2011 – 2015)</p>
+    <p>Relevant courses: Algorithms, DBMS, Artificial Intelligence</p>
+  </section>
 
-    <section>
-        <h2>Languages</h2>
-        <ul>
-            <li>English: Fluent</li>
-            <li>German: A2</li>
-            <li>Urdu/Hindi: Native</li>
-        </ul>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Predictive Maintenance (TensorFlow):</strong> Sensor data-driven failure prediction models</li>
+      <li><strong>AI Customer Support (ChatGPT + FastAPI):</strong> Real-time LLM integration for customer service</li>
+      <li><strong>COVID-19 Dashboard (Tableau + Python):</strong> Real-time visualization of public health data</li>
+    </ul>
+  </section>
 
-    <section>
-        <h2>Research & Publications</h2>
-        <p><strong>Semi-Supervised Learning for Product Quality Prediction</strong> (Thesis, RWTH Aachen, 2025)</p>
-        <p>Developed hybrid ML pipelines combining SMOTE, pseudo-labeling, and label propagation on semiconductor manufacturing data.</p>
-    </section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Microsoft Azure AI Fundamentals: Generative AI — March 2025</li>
+      <li>AI Workshop, Aixigo AG, Aachen — Feb 2024</li>
+      <li>Master SQL for Data Science — Udemy, 2022</li>
+    </ul>
+  </section>
 
-    <footer>
-        <hr />
-        <p style="text-align:center; font-size: 0.9em;">Aachen, Germany</p>
-    </footer>
+  <section id="languages">
+    <h2>Languages</h2>
+    <ul>
+      <li>English: Fluent</li>
+      <li>German: A2</li>
+      <li>Urdu/Hindi: Native</li>
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research & Publications</h2>
+    <p><strong>Semi-Supervised Learning for Product Quality Prediction</strong> (Thesis, RWTH Aachen, 2025)</p>
+    <p>Developed hybrid ML pipelines combining SMOTE, pseudo-labeling, and label propagation on semiconductor manufacturing data.</p>
+  </section>
+</div>
+
+<footer>
+  <p>Aachen, Germany</p>
+</footer>
+
+<script>
+  // Optional: Smooth scrolling for browsers that don't support CSS scroll-behavior
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      document.getElementById(targetID).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
 </body>
 </html>
