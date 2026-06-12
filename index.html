@@ -3,276 +3,219 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Muhammad Zahid, AI Engineer, ML Engineer, Data Scientist & Data Engineer. M.Sc. Data Science, RWTH Aachen. Open to roles across Germany."/>
-<meta name="keywords" content="AI Engineer, ML Engineer, Data Scientist, Data Engineer, LLM, RAG, MLOps, PySpark, RWTH Aachen, Germany, Munich, Berlin"/>
-<title>Muhammad Zahid · AI · ML · Data</title>
+<meta name="description" content="Muhammad Zahid, Data Scientist, ML Engineer. M.Sc. Data Science, RWTH Aachen. Open to roles across Germany."/>
+<title>Muhammad Zahid · Data Scientist · ML Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#0f1117;--ink-soft:#4a4a6a;--cream:#faf8f3;
-  --amber:#e8a020;--amber-light:#fff4dc;--amber-dark:#b87800;
-  --navy:#1a1a2e;--teal:#0f6e56;--teal-light:#e1f5ee;
-  --white:#fff;--border:rgba(26,26,46,0.12);--radius:12px;
+  --bg:#0b0c10;
+  --bg2:#111318;
+  --bg3:#181b22;
+  --border:rgba(255,255,255,0.07);
+  --text:#e8e9f0;
+  --muted:rgba(232,233,240,0.45);
+  --muted2:rgba(232,233,240,0.25);
+  --gold:#c9a84c;
+  --gold-dim:rgba(201,168,76,0.15);
+  --gold-border:rgba(201,168,76,0.3);
+  --teal:#2dd4a7;
+  --teal-dim:rgba(45,212,167,0.1);
+  --violet:#8b7cf8;
+  --violet-dim:rgba(139,124,248,0.1);
+  --blue:#4fa3e0;
+  --blue-dim:rgba(79,163,224,0.1);
+  --radius:10px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-thumb{background:var(--amber);border-radius:3px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+::selection{background:var(--gold);color:#000}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(250,248,243,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none}
-.nav-logo span{color:var(--amber)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(11,12,16,0.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.nav-logo em{color:var(--gold);font-style:normal}
 .nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:0.875rem;transition:color 0.2s}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--navy);color:#fff;padding:0.5rem 1.25rem;border-radius:999px;text-decoration:none;font-size:0.85rem;font-weight:500;transition:background 0.2s}
-.nav-cta:hover{background:var(--amber-dark)}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:0.82rem;letter-spacing:0.03em;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--gold);color:#000;padding:0.45rem 1.2rem;border-radius:999px;text-decoration:none;font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif;transition:opacity 0.2s}
+.nav-cta:hover{opacity:0.85}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(232,160,32,0.1) 0%,transparent 70%);pointer-events:none}
-.status-badge{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:var(--teal);font-size:0.78rem;font-weight:500;padding:0.4rem 1.1rem;border-radius:999px;border:1px solid rgba(15,110,86,0.25);margin-bottom:2rem;animation:fadeDown 0.5s ease both}
-.pulse{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:pulseAnim 2s infinite}
-@keyframes pulseAnim{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:1.0;margin-bottom:1rem;animation:fadeDown 0.6s ease 0.1s both}
-.hero-name .amber{color:var(--amber)}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 2rem 5rem;position:relative}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 50%,black 0%,transparent 100%);pointer-events:none}
+.hero-glow{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(201,168,76,0.08) 0%,transparent 70%);pointer-events:none}
+.avail-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(45,212,167,0.08);border:1px solid rgba(45,212,167,0.2);color:var(--teal);font-size:0.75rem;padding:0.35rem 1rem;border-radius:999px;margin-bottom:2.5rem;animation:up 0.5s ease both}
+.dot{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+.hero-name{font-family:'Syne',sans-serif;font-size:clamp(3.5rem,8vw,6.5rem);font-weight:800;line-height:0.95;letter-spacing:-0.03em;margin-bottom:1.5rem;animation:up 0.5s ease 0.1s both}
+.hero-name .line2{color:var(--gold)}
+.hero-role{font-size:0.8rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;animation:up 0.5s ease 0.15s both}
+.hero-desc{font-size:1rem;color:var(--muted);max-width:560px;margin:0 auto 2.5rem;font-weight:300;line-height:1.9;animation:up 0.5s ease 0.2s both}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:4rem;animation:up 0.5s ease 0.25s both}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#000;padding:0.85rem 2rem;border-radius:999px;text-decoration:none;font-size:0.9rem;font-weight:600;font-family:'Syne',sans-serif;transition:opacity 0.2s}
+.btn-gold:hover{opacity:0.85}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--muted);background:transparent;padding:0.85rem 1.75rem;border-radius:999px;text-decoration:none;font-size:0.9rem;transition:border-color 0.2s,color 0.2s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.25);color:var(--text)}
+.hero-stats{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;animation:up 0.5s ease 0.3s both}
+.hstat{text-align:center;position:relative}
+.hstat:not(:last-child)::after{content:'';position:absolute;right:-1.5rem;top:20%;height:60%;width:1px;background:var(--border)}
+.hstat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--text);line-height:1}
+.hstat-num em{color:var(--gold);font-style:normal;font-size:1.4rem}
+.hstat-label{font-size:0.72rem;color:var(--muted2);margin-top:5px;letter-spacing:0.04em}
 
-/* ROLE TABS */
-.role-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:1.75rem;animation:fadeDown 0.6s ease 0.15s both}
-.role-tab{padding:6px 18px;border-radius:999px;font-size:0.82rem;font-weight:500;border:1.5px solid var(--border);color:var(--ink-soft);cursor:pointer;transition:all 0.2s;background:transparent}
-.role-tab:hover,.role-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-
-.hero-desc{font-size:1.05rem;color:var(--ink-soft);max-width:640px;margin:0 auto 2.5rem;font-weight:300;line-height:1.9;animation:fadeDown 0.6s ease 0.2s both}
-.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeDown 0.6s ease 0.25s both;margin-bottom:3rem}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:0.9rem 2rem;border-radius:999px;text-decoration:none;font-size:0.95rem;font-weight:500;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(15,17,23,0.2)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(15,17,23,0.28)}
-.btn-ghost{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border);color:var(--ink);background:transparent;padding:0.9rem 1.75rem;border-radius:999px;text-decoration:none;font-size:0.95rem;transition:border-color 0.2s,background 0.2s}
-.btn-ghost:hover{background:var(--white);border-color:var(--navy)}
-.stats-row{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;animation:fadeDown 0.6s ease 0.3s both}
-.stat{text-align:center}
-.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--navy);line-height:1}
-.stat-num span{color:var(--amber)}
-.stat-label{font-size:0.78rem;color:var(--ink-soft);margin-top:4px;font-weight:300}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 /* SECTIONS */
 section{padding:6rem 2rem}
-.section-inner{max-width:1020px;margin:0 auto}
-.sec-header{text-align:center;max-width:620px;margin:0 auto 4rem}
-.eyebrow{font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber-dark);margin-bottom:0.75rem}
-.sec-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;line-height:1.15;margin-bottom:1rem}
-.sec-header p{color:var(--ink-soft);font-weight:300;line-height:1.8}
-
-/* TRACKS */
-.tracks{background:var(--white)}
-.tracks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
-.track-card{border:1.5px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:border-color 0.2s,transform 0.2s;cursor:default}
-.track-card:hover{transform:translateY(-3px)}
-.track-card.ai:hover{border-color:#534AB7}
-.track-card.ml:hover{border-color:var(--amber)}
-.track-card.ds:hover{border-color:var(--teal)}
-.track-card.de:hover{border-color:#185FA5}
-.track-icon{font-size:1.75rem;margin-bottom:0.75rem}
-.track-card h3{font-size:0.95rem;font-weight:500;margin-bottom:0.5rem}
-.track-card p{font-size:0.8rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1rem}
-.track-tags{display:flex;flex-wrap:wrap;gap:5px}
-.ttag{border-radius:5px;padding:2px 9px;font-size:0.7rem;font-weight:500}
-.ttag.ai{background:#EEEDFE;color:#3C3489}
-.ttag.ml{background:var(--amber-light);color:var(--amber-dark)}
-.ttag.ds{background:var(--teal-light);color:var(--teal)}
-.ttag.de{background:#E6F1FB;color:#0C447C}
+.inner{max-width:1040px;margin:0 auto}
+.sec-label{font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em}
+.sec-sub{color:var(--muted);font-weight:300;line-height:1.8;max-width:540px}
 
 /* ABOUT */
-.about{background:var(--cream)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.profile-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid var(--amber);box-shadow:0 0 0 5px var(--amber-light);margin-bottom:2rem;display:block}
-.about-text h3{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1.2;margin-bottom:1.25rem}
-.about-text p{color:var(--ink-soft);font-weight:300;line-height:1.9;margin-bottom:1rem}
-.about-text p strong{color:var(--ink);font-weight:500}
-.about-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
-.chip{border-radius:999px;padding:4px 14px;font-size:0.8rem;font-weight:500}
-.chip.amber{background:var(--amber-light);color:var(--amber-dark);border:1px solid rgba(232,160,32,0.3)}
-.chip.teal{background:var(--teal-light);color:var(--teal);border:1px solid rgba(15,110,86,0.25)}
-.chip.navy{background:rgba(26,26,46,0.06);color:var(--navy);border:1px solid rgba(26,26,46,0.15)}
-.metrics-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem}
-.metric-row{display:flex;justify-content:space-between;align-items:flex-start;padding:1.1rem 0;border-bottom:1px solid var(--border)}
-.metric-row:last-child{border-bottom:none;padding-bottom:0}
-.metric-row:first-child{padding-top:0}
-.metric-val{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--navy);line-height:1;flex-shrink:0}
-.metric-val span{color:var(--amber);font-size:1.3rem}
-.metric-info{text-align:right}
-.metric-info .label{font-size:0.82rem;color:var(--ink-soft);line-height:1.5}
-.metric-info .sublabel{font-size:0.72rem;color:var(--amber-dark);margin-top:2px}
+.about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.about-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--gold);margin-bottom:2rem;display:block}
+.about-text h3{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:1.25rem;letter-spacing:-0.02em}
+.about-text p{color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:1rem;font-size:0.95rem}
+.about-text p strong{color:var(--text);font-weight:500}
+.about-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:1.5rem}
+.chip{border-radius:6px;padding:4px 12px;font-size:0.75rem;font-weight:500;border:1px solid}
+.chip.g{background:var(--gold-dim);color:var(--gold);border-color:var(--gold-border)}
+.chip.t{background:var(--teal-dim);color:var(--teal);border-color:rgba(45,212,167,0.2)}
+.chip.n{background:rgba(255,255,255,0.04);color:var(--muted);border-color:var(--border)}
+.metrics-stack{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden}
+.mrow{background:var(--bg3);padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.mval{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--text);line-height:1;white-space:nowrap}
+.mval em{color:var(--gold);font-style:normal;font-size:1.2rem}
+.minfo{text-align:right}
+.minfo .ml{font-size:0.82rem;color:var(--muted);line-height:1.5}
+.minfo .ms{font-size:0.7rem;color:var(--gold);margin-top:2px;font-weight:500}
 
 /* SKILLS */
-.skills{background:var(--white)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
-.skill-card{border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:border-color 0.2s,transform 0.2s}
-.skill-card:hover{transform:translateY(-3px)}
-.skill-card.ai:hover{border-color:#534AB7}
-.skill-card.ml:hover{border-color:var(--amber)}
-.skill-card.ds:hover{border-color:var(--teal)}
-.skill-card.de:hover{border-color:#185FA5}
-.skill-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.35rem}
-.skill-icon.ai{background:#EEEDFE}
-.skill-icon.ml{background:var(--amber-light)}
-.skill-icon.ds{background:var(--teal-light)}
-.skill-icon.de{background:#E6F1FB}
-.skill-card h3{font-size:1rem;font-weight:500;margin-bottom:0.75rem}
-.stags{display:flex;flex-wrap:wrap;gap:6px}
-.stag{background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:0.74rem;color:var(--ink-soft)}
+.skills{background:var(--bg)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;margin-top:3rem}
+.sk{background:var(--bg2);padding:1.75rem;transition:background 0.2s}
+.sk:hover{background:var(--bg3)}
+.sk-icon{font-size:1.4rem;margin-bottom:1rem}
+.sk h4{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.75rem;letter-spacing:-0.01em}
+.sk-tags{display:flex;flex-wrap:wrap;gap:5px}
+.stag{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:5px;padding:2px 9px;font-size:0.72rem;color:var(--muted)}
 
 /* EXPERIENCE */
-.experience{background:var(--cream)}
-.exp-timeline{display:flex;flex-direction:column;max-width:820px;margin:0 auto}
-.exp-item{display:grid;grid-template-columns:190px 1fr;gap:2rem;position:relative;padding-bottom:3rem}
-.exp-item:last-child{padding-bottom:0}
-.exp-item::before{content:'';position:absolute;left:188px;top:10px;bottom:0;width:1px;background:var(--border)}
-.exp-item:last-child::before{display:none}
-.exp-item::after{content:'';position:absolute;left:182px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--amber);border:2px solid var(--cream);box-shadow:0 0 0 2px var(--amber)}
-.exp-date{text-align:right;padding-top:2px}
-.exp-date .period{font-size:0.78rem;color:var(--ink-soft);font-weight:300;display:block}
-.exp-date .location{font-size:0.8rem;color:var(--ink);font-weight:500;display:block;margin-top:3px}
-.exp-content{padding-left:1.5rem}
-.exp-company{font-size:0.75rem;font-weight:500;color:var(--amber-dark);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px}
-.exp-role{font-size:1.05rem;font-weight:500;margin-bottom:0.75rem}
-.exp-bullets{list-style:none;padding:0;margin:0}
-.exp-bullets li{font-size:0.875rem;color:var(--ink-soft);line-height:1.75;padding-left:1.1rem;position:relative;margin-bottom:4px}
-.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--amber);font-size:0.75rem;top:2px}
-.exp-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
-.exp-tag{background:var(--white);border:1px solid var(--border);border-radius:5px;padding:2px 9px;font-size:0.72rem;color:var(--ink-soft)}
+.experience{background:var(--bg2)}
+.exp-list{margin-top:3rem;display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden}
+.exp{background:var(--bg3);padding:2rem 2.5rem;display:grid;grid-template-columns:180px 1fr;gap:2rem;transition:background 0.2s}
+.exp:hover{background:var(--bg2)}
+.exp-meta .period{font-size:0.75rem;color:var(--muted2);display:block;margin-bottom:4px}
+.exp-meta .loc{font-size:0.78rem;color:var(--muted);font-weight:500}
+.exp-body .co{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.exp-body .role{font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.9rem;letter-spacing:-0.01em}
+.exp-body ul{list-style:none;padding:0}
+.exp-body ul li{font-size:0.855rem;color:var(--muted);line-height:1.75;padding-left:1.1rem;position:relative;margin-bottom:3px}
+.exp-body ul li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:0.7rem;top:3px}
+.exp-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:1rem}
+.etag{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:5px;padding:2px 9px;font-size:0.7rem;color:var(--muted2)}
 
 /* PROJECTS */
-.projects{background:var(--navy)}
-.projects .eyebrow{color:var(--amber)}
-.projects .sec-header h2{color:var(--white)}
-.projects .sec-header p{color:rgba(255,255,255,0.45)}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.project-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:var(--radius);padding:1.75rem;transition:border-color 0.2s,background 0.2s;position:relative;overflow:hidden}
-.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity 0.2s}
-.project-card:hover::before{opacity:1}
-.project-card:hover{background:rgba(255,255,255,0.06)}
-.project-card.ai-p::before{background:#7F77DD}
-.project-card.ai-p:hover{border-color:rgba(127,119,221,0.4)}
-.project-card.ml-p::before{background:var(--amber)}
-.project-card.ml-p:hover{border-color:rgba(232,160,32,0.4)}
-.project-card.ds-p::before{background:var(--teal)}
-.project-card.ds-p:hover{border-color:rgba(15,110,86,0.4)}
-.project-card.de-p::before{background:#378ADD}
-.project-card.de-p:hover{border-color:rgba(55,138,221,0.4)}
-.project-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.05);line-height:1;margin-bottom:0.25rem}
-.project-track{font-size:0.68rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
-.project-track.ai-t{color:#AFA9EC}
-.project-track.ml-t{color:var(--amber)}
-.project-track.ds-t{color:#5DCAA5}
-.project-track.de-t{color:#85B7EB}
-.project-stack{font-size:0.74rem;color:rgba(255,255,255,0.35);margin-bottom:0.5rem}
-.project-card h3{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:0.6rem}
-.project-card p{font-size:0.84rem;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:1rem}
-.project-metrics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem}
-.pm{display:inline-flex;border-radius:999px;padding:3px 12px;font-size:0.73rem}
-.pm.ai-m{background:rgba(127,119,221,0.12);border:1px solid rgba(127,119,221,0.25);color:#AFA9EC}
-.pm.ml-m{background:rgba(232,160,32,0.1);border:1px solid rgba(232,160,32,0.22);color:var(--amber)}
-.pm.ds-m{background:rgba(15,110,86,0.12);border:1px solid rgba(15,110,86,0.25);color:#5DCAA5}
-.pm.de-m{background:rgba(55,138,221,0.1);border:1px solid rgba(55,138,221,0.22);color:#85B7EB}
-.project-link{font-size:0.78rem;color:rgba(255,255,255,0.45);text-decoration:none;border:1px solid rgba(255,255,255,0.13);border-radius:6px;padding:4px 14px;transition:border-color 0.2s,color 0.2s;display:inline-block}
-.project-link:hover{border-color:var(--amber);color:var(--amber)}
-
-/* SIDE PROJECTS */
-.sideprojects{background:var(--cream)}
-.sp-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 2.5rem;max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:start}
-.sp-badge{display:inline-flex;align-items:center;gap:6px;background:var(--amber-light);color:var(--amber-dark);font-size:0.72rem;font-weight:500;padding:3px 12px;border-radius:999px;border:1px solid rgba(232,160,32,0.3);margin-bottom:0.75rem}
-.sp-card h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin-bottom:0.4rem}
-.sp-sub{font-size:0.85rem;color:var(--amber-dark);font-weight:500;margin-bottom:0.75rem}
-.sp-card p{font-size:0.9rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.25rem}
-.sp-features{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.5rem}
-.sp-feat{font-size:0.8rem;color:var(--ink-soft);display:flex;align-items:center;gap:5px}
-.sp-feat::before{content:'✓';color:var(--teal);font-weight:700;font-size:0.85rem}
-.sp-links{display:flex;gap:10px;flex-wrap:wrap}
-.sp-link-primary{display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:#fff;padding:0.65rem 1.4rem;border-radius:999px;text-decoration:none;font-size:0.85rem;font-weight:500;transition:background 0.2s}
-.sp-link-primary:hover{background:var(--amber-dark)}
-.sp-link-ghost{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--border);color:var(--ink);padding:0.65rem 1.2rem;border-radius:999px;text-decoration:none;font-size:0.85rem;transition:border-color 0.2s}
-.sp-link-ghost:hover{border-color:var(--navy)}
-.sp-right{display:flex;flex-direction:column;gap:1rem;min-width:170px}
-.sp-stat{text-align:center;background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1rem}
-.sp-stat-num{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;color:var(--navy);line-height:1}
-.sp-stat-num span{color:var(--amber)}
-.sp-stat-label{font-size:0.72rem;color:var(--ink-soft);margin-top:3px}
-.sp-demo{background:var(--navy);border-radius:10px;padding:1rem 1.25rem}
-.sp-demo-label{font-size:0.65rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);margin-bottom:0.6rem}
-.sp-demo-text{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:0.75rem}
-.sp-demo-hl{background:var(--amber-light);border-bottom:2px solid var(--amber);padding:1px 4px;border-radius:3px;font-weight:500;color:var(--ink)}
-.sp-chips{display:flex;flex-wrap:wrap;gap:5px}
-.sp-chip{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:999px;padding:2px 10px;font-size:0.74rem;color:rgba(255,255,255,0.8)}
-@media(max-width:700px){.sp-card{grid-template-columns:1fr}}
+.projects{background:var(--bg)}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;margin-top:3rem}
+.pcard{background:var(--bg2);padding:2rem;position:relative;overflow:hidden;transition:background 0.2s}
+.pcard:hover{background:var(--bg3)}
+.pcard-accent{position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity 0.2s}
+.pcard:hover .pcard-accent{opacity:1}
+.pcard.fraud .pcard-accent{background:var(--gold)}
+.pcard.rag .pcard-accent{background:var(--violet)}
+.pcard.credit .pcard-accent{background:var(--teal)}
+.pcard.nlp .pcard-accent{background:var(--blue)}
+.pcard-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(255,255,255,0.04);line-height:1;margin-bottom:0.25rem}
+.pcard-track{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px}
+.pcard.fraud .pcard-track{color:var(--gold)}
+.pcard.rag .pcard-track{color:var(--violet)}
+.pcard.credit .pcard-track{color:var(--teal)}
+.pcard.nlp .pcard-track{color:var(--blue)}
+.pcard-stack{font-size:0.72rem;color:var(--muted2);margin-bottom:0.6rem}
+.pcard h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:0.6rem;letter-spacing:-0.01em}
+.pcard p{font-size:0.84rem;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.pcard-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem}
+.pill{border-radius:999px;padding:3px 12px;font-size:0.72rem;font-weight:500}
+.pill.fraud{background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold)}
+.pill.rag{background:var(--violet-dim);border:1px solid rgba(139,124,248,0.25);color:var(--violet)}
+.pill.credit{background:var(--teal-dim);border:1px solid rgba(45,212,167,0.2);color:var(--teal)}
+.pill.nlp{background:var(--blue-dim);border:1px solid rgba(79,163,224,0.2);color:var(--blue)}
+.pcard-link{font-size:0.75rem;color:var(--muted2);text-decoration:none;border:1px solid var(--border);border-radius:5px;padding:4px 12px;transition:border-color 0.2s,color 0.2s;display:inline-block}
+.pcard-link:hover{border-color:var(--gold);color:var(--gold)}
 
 /* EDUCATION */
-.education{background:var(--white)}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:820px;margin:0 auto 3rem}
-.edu-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem}
-.edu-icon{font-size:1.75rem;margin-bottom:0.9rem}
-.edu-card h3{font-size:1rem;font-weight:500;margin-bottom:3px}
-.edu-school{font-size:0.85rem;color:var(--amber-dark);font-weight:500;margin-bottom:3px}
-.edu-year{font-size:0.78rem;color:var(--ink-soft);margin-bottom:0.75rem}
-.edu-card p{font-size:0.84rem;color:var(--ink-soft);line-height:1.75}
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:820px;margin:0 auto}
-.cert-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem}
-.cert-icon{font-size:1.25rem;flex-shrink:0;margin-top:2px}
-.cert-info h4{font-size:0.875rem;font-weight:500;margin-bottom:3px}
-.cert-issuer{font-size:0.78rem;color:var(--amber-dark);font-weight:500}
-.cert-date{font-size:0.74rem;color:var(--ink-soft);margin-top:2px}
+.education{background:var(--bg2)}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;margin-top:3rem;margin-bottom:2rem}
+.edu-card{background:var(--bg3);padding:2rem}
+.edu-icon{font-size:1.5rem;margin-bottom:1rem}
+.edu-card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px;letter-spacing:-0.01em}
+.edu-school{font-size:0.82rem;color:var(--gold);font-weight:500;margin-bottom:3px}
+.edu-year{font-size:0.75rem;color:var(--muted2);margin-bottom:0.9rem}
+.edu-card p{font-size:0.83rem;color:var(--muted);line-height:1.8}
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden}
+.cert{background:var(--bg3);padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
+.cert-ico{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.cert h4{font-size:0.83rem;font-weight:500;margin-bottom:3px;line-height:1.4}
+.cert-iss{font-size:0.75rem;color:var(--gold);font-weight:500}
+.cert-dt{font-size:0.7rem;color:var(--muted2);margin-top:2px}
 
 /* CONTACT */
-.contact{background:var(--navy);text-align:center}
-.contact .eyebrow{color:var(--amber)}
-.contact h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--white);margin-bottom:1rem}
-.contact-sub{color:rgba(255,255,255,0.45);max-width:540px;margin:0 auto 1.5rem;font-weight:300;line-height:1.8}
-.open-to{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 auto 2.5rem;max-width:640px}
-.open-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:4px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6)}
+.contact{background:var(--bg);text-align:center;position:relative;overflow:hidden}
+.contact-glow{position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);width:500px;height:300px;background:radial-gradient(ellipse,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.contact h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem}
+.contact h2 em{color:var(--gold);font-style:normal}
+.contact-sub{color:var(--muted);max-width:480px;margin:0 auto 2rem;font-weight:300;line-height:1.8;font-size:0.95rem}
+.open-chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:0 auto 2.5rem;max-width:640px}
+.oc{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:999px;padding:4px 14px;font-size:0.75rem;color:var(--muted2)}
 .contact-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
-.contact-link{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.75);background:transparent;padding:0.85rem 1.75rem;border-radius:999px;text-decoration:none;font-size:0.9rem;transition:border-color 0.2s,color 0.2s}
-.contact-link:hover{border-color:var(--amber);color:var(--amber)}
-.contact-link.primary{background:var(--amber);color:var(--navy);border-color:var(--amber);font-weight:500}
-.contact-link.primary:hover{background:var(--amber-dark);border-color:var(--amber-dark);color:#fff}
-.contact-note{font-size:0.82rem;color:rgba(255,255,255,0.28)}
+.clink{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--muted);background:transparent;padding:0.8rem 1.6rem;border-radius:999px;text-decoration:none;font-size:0.88rem;transition:border-color 0.2s,color 0.2s}
+.clink:hover{border-color:rgba(255,255,255,0.2);color:var(--text)}
+.clink.primary{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600;font-family:'Syne',sans-serif}
+.clink.primary:hover{opacity:0.85}
+.contact-note{font-size:0.78rem;color:var(--muted2)}
 
-footer{background:#09090f;color:rgba(255,255,255,0.2);text-align:center;padding:1.75rem;font-size:0.78rem}
-footer a{color:rgba(255,255,255,0.35);text-decoration:none}
-footer a:hover{color:var(--amber)}
+footer{background:#060608;color:var(--muted2);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:1px solid var(--border)}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold)}
 
-@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:0.08s}.d2{transition-delay:0.16s}.d3{transition-delay:0.24s}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
 
-@media(max-width:900px){.tracks-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .projects-grid{grid-template-columns:1fr}
+}
 @media(max-width:768px){
   nav{padding:1rem 1.25rem}
   .nav-links{display:none}
-  .about-grid,.edu-grid{grid-template-columns:1fr}
-  .exp-item{grid-template-columns:1fr;gap:0.25rem}
-  .exp-item::before,.exp-item::after{display:none}
-  .exp-date{text-align:left}
-  .exp-content{padding-left:0}
-  .stats-row{gap:1.75rem}
-  .tracks-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.edu-grid,.certs{grid-template-columns:1fr}
+  .exp{grid-template-columns:1fr;gap:0.5rem}
+  .skills-grid{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem}
+  .hstat:not(:last-child)::after{display:none}
 }
-@media(max-width:480px){.tracks-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="#">MZ<span>.</span></a>
+  <a class="nav-logo" href="#">MZ<em>.</em></a>
   <div class="nav-links">
-    <a href="#tracks">Expertise</a>
+    <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#sideprojects">Side Projects</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </div>
   <a class="nav-cta" href="mailto:muh.zahidsaeed@gmail.com">Hire Me</a>
@@ -280,110 +223,70 @@ footer a:hover{color:var(--amber)}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="status-badge"><span class="pulse"></span>Open to AI · ML · Data roles across Germany</div>
-  <img src="profile.jpg" alt="Muhammad Zahid" class="profile-photo" style="animation:fadeDown 0.5s ease 0.05s both"/>
-  <h1 class="hero-name">Muhammad<br/><span class="amber">Zahid</span></h1>
-
-  <div class="role-tabs">
-    <span class="role-tab active">AI Engineer</span>
-    <span class="role-tab">ML Engineer</span>
-    <span class="role-tab">Data Scientist</span>
-    <span class="role-tab">Data Engineer</span>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="avail-badge"><span class="dot"></span>Open to Data Scientist · ML Engineer roles in Germany</div>
+  <h1 class="hero-name">Muhammad<br/><span class="line2">Zahid</span></h1>
+  <div class="hero-role">Data Scientist &nbsp;·&nbsp; ML Engineer &nbsp;·&nbsp; AI Engineer</div>
+  <p class="hero-desc">M.Sc. Data Science, RWTH Aachen. 2+ years shipping production ML systems in manufacturing and FinTech — 70% less manual reporting, 25% fewer machine failures, RAG at sub-second latency over 10,000+ documents.</p>
+  <div class="hero-btns">
+    <a class="btn-gold" href="#projects">View Projects</a>
+    <a class="btn-outline" href="mailto:muh.zahidsaeed@gmail.com">Get in Touch</a>
   </div>
-
-  <p class="hero-desc">
-    M.Sc. Data Science, RWTH Aachen. 3+ years shipping production AI systems across FinTech and Industry 4.0: 70% less manual reporting, 25% fewer machine failures, sub-second RAG at 10,000+ documents. Authorized to work in Germany.
-  </p>
-  <div class="hero-cta">
-    <a class="btn-primary" href="#projects">View My Work</a>
-    <a class="btn-ghost" href="mailto:muh.zahidsaeed@gmail.com">Get in Touch</a>
-  </div>
-  <div class="stats-row">
-    <div class="stat"><div class="stat-num">70<span>%</span></div><div class="stat-label">Manual work eliminated</div></div>
-    <div class="stat"><div class="stat-num">10<span>TB+</span></div><div class="stat-label">Data processed · 99.9%</div></div>
-    <div class="stat"><div class="stat-num">5.6<span>×</span></div><div class="stat-label">Pipeline speed-up</div></div>
-    <div class="stat"><div class="stat-num">95<span>%</span></div><div class="stat-label">Sensor model accuracy</div></div>
-  </div>
-</section>
-
-<!-- TRACKS -->
-<section class="tracks" id="tracks">
-  <div class="section-inner">
-    <div class="sec-header reveal">
-      <div class="eyebrow">Areas of Expertise</div>
-      <h2>Four tracks. One engineer.</h2>
-      <p>End-to-end AI expertise, from raw sensor data to production LLM systems and scalable data infrastructure.</p>
+  <div class="hero-stats">
+    <div class="hstat">
+      <div class="hstat-num">70<em>%</em></div>
+      <div class="hstat-label">Reporting eliminated</div>
     </div>
-    <div class="tracks-grid">
-      <div class="track-card ai reveal">
-        <div class="track-icon">🤖</div>
-        <h3>AI Engineer</h3>
-        <p>LLM deployment, RAG architectures, multi-agent systems, and production AI pipelines with measurable business outcomes.</p>
-        <div class="track-tags">
-          <span class="ttag ai">LangChain</span><span class="ttag ai">LangGraph</span><span class="ttag ai">RAG</span><span class="ttag ai">GPT-4</span><span class="ttag ai">FastAPI</span>
-        </div>
-      </div>
-      <div class="track-card ml reveal d1">
-        <div class="track-icon">⚙️</div>
-        <h3>ML Engineer</h3>
-        <p>Predictive modelling, time-series forecasting, model deployment, MLOps pipelines, and production monitoring.</p>
-        <div class="track-tags">
-          <span class="ttag ml">PyTorch</span><span class="ttag ml">XGBoost</span><span class="ttag ml">MLflow</span><span class="ttag ml">Docker</span><span class="ttag ml">SMOTE</span>
-        </div>
-      </div>
-      <div class="track-card ds reveal d2">
-        <div class="track-icon">📊</div>
-        <h3>Data Scientist</h3>
-        <p>Predictive analytics, explainable AI, A/B testing, anomaly detection, and statistical modelling on real-world datasets.</p>
-        <div class="track-tags">
-          <span class="ttag ds">SHAP</span><span class="ttag ds">Pandas</span><span class="ttag ds">Transformers</span><span class="ttag ds">EDA</span><span class="ttag ds">Plotly</span>
-        </div>
-      </div>
-      <div class="track-card de reveal d3">
-        <div class="track-icon">🗄️</div>
-        <h3>Data Engineer</h3>
-        <p>PySpark, Databricks, Kafka, Airflow: scalable ETL/ELT pipelines and data warehouse architecture at 10TB+ scale.</p>
-        <div class="track-tags">
-          <span class="ttag de">PySpark</span><span class="ttag de">Databricks</span><span class="ttag de">Airflow</span><span class="ttag de">Kafka</span><span class="ttag de">dbt</span>
-        </div>
-      </div>
+    <div class="hstat">
+      <div class="hstat-num">10<em>TB+</em></div>
+      <div class="hstat-label">Data processed · 99.9%</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-num">95<em>%</em></div>
+      <div class="hstat-label">Sensor model accuracy</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-num">25<em>%</em></div>
+      <div class="hstat-label">Less machine downtime</div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="section-inner">
+  <div class="inner">
     <div class="about-grid">
-      <div class="about-text reveal">
-        <h3>Production AI that drives measurable results</h3>
-        <p>I'm an AI & ML Engineer with an <strong>M.Sc. in Data Science from RWTH Aachen University</strong>, covering machine learning, deep learning, reinforcement learning, and database systems.</p>
-        <p>At <strong>aixigo AG</strong> I architected a GPT-4 RAG financial assistant eliminating 70% of manual reporting and processing 10TB+ of financial data via PySpark on Databricks. At <strong>WZL Aachen</strong> I deploy predictive maintenance AI into live manufacturing workflows. At <strong>IMSE</strong> I reduced unplanned machine downtime by 25% through real-time condition monitoring.</p>
-        <p>My thesis, currently being extended toward <strong>peer-reviewed publication</strong>, benchmarks semi-supervised ML frameworks for Industry 4.0 quality assurance under real-world data scarcity.</p>
+      <div class="reveal">
+        <img src="profile.jpg" alt="Muhammad Zahid" class="about-photo"/>
+        <h3>Production ML that ships and sticks.</h3>
+        <p>I'm a Data Scientist with an <strong>M.Sc. in Data Science from RWTH Aachen University</strong>, covering machine learning, deep learning, reinforcement learning, and database systems.</p>
+        <p>At <strong>aixigo AG</strong> I architected a GPT-4 RAG assistant eliminating 70% of manual financial reporting and processing 10TB+ via PySpark on Databricks. At <strong>WZL Aachen</strong> I deploy predictive maintenance models into live manufacturing workflows. My thesis benchmarks semi-supervised ML frameworks for Industry 4.0 quality assurance under real-world data scarcity.</p>
+        <p>I build things that work in production, not just notebooks.</p>
         <div class="about-chips">
-          <span class="chip amber">📍 Aachen, Germany</span>
-          <span class="chip amber">M.Sc. Data Science · RWTH</span>
-          <span class="chip teal">✅ Open to work</span>
-          <span class="chip navy">🇩🇪 English C1 · German A2</span>
-          <span class="chip navy">🛂 Authorized to work in Germany</span>
+          <span class="chip g">📍 Aachen, Germany</span>
+          <span class="chip g">M.Sc. · RWTH Aachen</span>
+          <span class="chip t">✅ Open to work</span>
+          <span class="chip n">🇩🇪 English C1 · German A2</span>
+          <span class="chip n">🛂 Authorized to work in Germany</span>
         </div>
       </div>
-      <div class="metrics-card reveal d1">
-        <div class="metric-row">
-          <div class="metric-val">70<span>%</span></div>
-          <div class="metric-info"><div class="label">Manual reporting eliminated<br/>via LLM orchestration</div><div class="sublabel">aixigo AG</div></div>
+      <div class="metrics-stack reveal d1">
+        <div class="mrow">
+          <div class="mval">70<em>%</em></div>
+          <div class="minfo"><div class="ml">Manual reporting eliminated<br/>via LLM orchestration</div><div class="ms">aixigo AG</div></div>
         </div>
-        <div class="metric-row">
-          <div class="metric-val">95<span>%</span></div>
-          <div class="metric-info"><div class="label">Model accuracy on vibration<br/>sensor data · 3+ machine types</div><div class="sublabel">IMSE, Aachen</div></div>
+        <div class="mrow">
+          <div class="mval">95<em>%</em></div>
+          <div class="minfo"><div class="ml">Model accuracy on vibration<br/>sensor data · 3+ machine types</div><div class="ms">IMSE Aachen</div></div>
         </div>
-        <div class="metric-row">
-          <div class="metric-val">30<span>%</span></div>
-          <div class="metric-info"><div class="label">LLM inference latency reduced<br/>via quantization + async FastAPI</div><div class="sublabel">aixigo AG</div></div>
+        <div class="mrow">
+          <div class="mval">30<em>%</em></div>
+          <div class="minfo"><div class="ml">LLM latency reduced via<br/>quantization + async FastAPI</div><div class="ms">aixigo AG</div></div>
         </div>
-        <div class="metric-row">
-          <div class="metric-val">5.6<span>×</span></div>
-          <div class="metric-info"><div class="label">Pipeline speed-up · 45s → 8s<br/>across 1M+ pages · 5 languages</div><div class="sublabel">OCR-NLP project</div></div>
+        <div class="mrow">
+          <div class="mval">18<em>%</em></div>
+          <div class="minfo"><div class="ml">Model performance boost via<br/>semi-supervised learning + SMOTE</div><div class="ms">WZL Aachen</div></div>
         </div>
       </div>
     </div>
@@ -392,54 +295,42 @@ footer a:hover{color:var(--amber)}
 
 <!-- SKILLS -->
 <section class="skills" id="skills">
-  <div class="section-inner">
-    <div class="sec-header reveal">
-      <div class="eyebrow">Technical Skills</div>
-      <h2>Full-stack AI expertise</h2>
-      <p>From raw sensor data and ETL pipelines to production LLM systems and cloud deployment.</p>
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Technical Skills</div>
+      <h2 class="sec-title">Full-stack ML expertise</h2>
+      <p class="sec-sub">From raw sensor data and ETL pipelines to production LLM systems and cloud deployment.</p>
     </div>
     <div class="skills-grid">
-      <div class="skill-card ai reveal">
-        <div class="skill-icon ai">🤖</div>
-        <h3>LLM &amp; Agentic AI</h3>
-        <div class="stags">
-          <span class="stag">LangChain</span><span class="stag">LangGraph</span><span class="stag">RAG</span><span class="stag">Fine-tuning (LoRA)</span><span class="stag">Prompt Engineering</span><span class="stag">DSPy</span><span class="stag">LlamaIndex</span><span class="stag">FAISS</span><span class="stag">ChromaDB</span>
-        </div>
+      <div class="sk reveal">
+        <div class="sk-icon">🤖</div>
+        <h4>LLM & RAG Systems</h4>
+        <div class="sk-tags"><span class="stag">LangChain</span><span class="stag">LangGraph</span><span class="stag">RAG</span><span class="stag">Fine-tuning (LoRA)</span><span class="stag">Prompt Engineering</span><span class="stag">LlamaIndex</span><span class="stag">FAISS</span><span class="stag">ChromaDB</span></div>
       </div>
-      <div class="skill-card ml reveal d1">
-        <div class="skill-icon ml">⚙️</div>
-        <h3>Machine Learning &amp; MLOps</h3>
-        <div class="stags">
-          <span class="stag">scikit-learn</span><span class="stag">XGBoost</span><span class="stag">PyTorch</span><span class="stag">Transformers</span><span class="stag">MLflow</span><span class="stag">Docker</span><span class="stag">CI/CD</span><span class="stag">TorchServe</span><span class="stag">SHAP</span>
-        </div>
+      <div class="sk reveal d1">
+        <div class="sk-icon">⚙️</div>
+        <h4>Machine Learning</h4>
+        <div class="sk-tags"><span class="stag">scikit-learn</span><span class="stag">XGBoost</span><span class="stag">Gradient Boosting</span><span class="stag">Ensemble Methods</span><span class="stag">SHAP</span><span class="stag">SMOTE</span><span class="stag">Hyperparameter Tuning</span></div>
       </div>
-      <div class="skill-card ds reveal">
-        <div class="skill-icon ds">📊</div>
-        <h3>Data Science &amp; Analytics</h3>
-        <div class="stags">
-          <span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">Statistical Analysis</span><span class="stag">A/B Testing</span><span class="stag">Time Series</span><span class="stag">Anomaly Detection</span><span class="stag">EDA</span><span class="stag">Plotly</span>
-        </div>
+      <div class="sk reveal d2">
+        <div class="sk-icon">🧠</div>
+        <h4>Deep Learning & NLP</h4>
+        <div class="sk-tags"><span class="stag">PyTorch</span><span class="stag">Transformers</span><span class="stag">Hugging Face</span><span class="stag">BERT</span><span class="stag">LSTM</span><span class="stag">Text Classification</span><span class="stag">spaCy</span></div>
       </div>
-      <div class="skill-card de reveal d1">
-        <div class="skill-icon de">🗄️</div>
-        <h3>Data Engineering</h3>
-        <div class="stags">
-          <span class="stag">PySpark</span><span class="stag">Databricks</span><span class="stag">Airflow</span><span class="stag">Kafka</span><span class="stag">dbt</span><span class="stag">Delta Lake</span><span class="stag">ETL/ELT</span><span class="stag">PostgreSQL</span>
-        </div>
+      <div class="sk reveal">
+        <div class="sk-icon">📊</div>
+        <h4>Data Science & Analytics</h4>
+        <div class="sk-tags"><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">Statistical Analysis</span><span class="stag">A/B Testing</span><span class="stag">Time Series</span><span class="stag">Anomaly Detection</span><span class="stag">EDA</span></div>
       </div>
-      <div class="skill-card ai reveal">
-        <div class="skill-icon ai">☁️</div>
-        <h3>Cloud &amp; Infrastructure</h3>
-        <div class="stags">
-          <span class="stag">AWS SageMaker</span><span class="stag">AWS Bedrock</span><span class="stag">Azure ML</span><span class="stag">Azure Synapse</span><span class="stag">GCP Vertex AI</span><span class="stag">Kubernetes</span><span class="stag">FastAPI</span>
-        </div>
+      <div class="sk reveal d1">
+        <div class="sk-icon">🗄️</div>
+        <h4>Data Engineering & MLOps</h4>
+        <div class="sk-tags"><span class="stag">PySpark</span><span class="stag">Databricks</span><span class="stag">Airflow</span><span class="stag">PostgreSQL</span><span class="stag">MLflow</span><span class="stag">Docker</span><span class="stag">CI/CD</span><span class="stag">FastAPI</span></div>
       </div>
-      <div class="skill-card ml reveal d1">
-        <div class="skill-icon ml">💻</div>
-        <h3>Programming &amp; Tools</h3>
-        <div class="stags">
-          <span class="stag">Python</span><span class="stag">SQL</span><span class="stag">R</span><span class="stag">Bash</span><span class="stag">Git</span><span class="stag">CUDA</span><span class="stag">Power BI</span><span class="stag">Pinecone</span><span class="stag">pgvector</span>
-        </div>
+      <div class="sk reveal d2">
+        <div class="sk-icon">☁️</div>
+        <h4>Cloud & Visualization</h4>
+        <div class="sk-tags"><span class="stag">AWS SageMaker</span><span class="stag">Azure ML</span><span class="stag">Power BI</span><span class="stag">Plotly</span><span class="stag">Streamlit</span><span class="stag">Matplotlib</span><span class="stag">Seaborn</span></div>
       </div>
     </div>
   </div>
@@ -447,355 +338,215 @@ footer a:hover{color:var(--amber)}
 
 <!-- EXPERIENCE -->
 <section class="experience" id="experience">
-  <div class="section-inner">
-    <div class="sec-header reveal">
-      <div class="eyebrow">Work Experience</div>
-      <h2>Where I've delivered impact</h2>
-      <p>Research institutes and enterprise environments: manufacturing AI, FinTech LLMs, and industrial data engineering.</p>
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Work Experience</div>
+      <h2 class="sec-title">Where I've delivered impact</h2>
     </div>
-    <div class="exp-timeline">
-
-      <div class="exp-item reveal">
-        <div class="exp-date">
+    <div class="exp-list">
+      <div class="exp reveal">
+        <div class="exp-meta">
           <span class="period">Oct 2024 – Present</span>
-          <span class="location">Aachen, DE</span>
+          <span class="loc">Aachen, Germany</span>
         </div>
-        <div class="exp-content">
-          <div class="exp-company">WZL, RWTH Aachen University</div>
-          <div class="exp-role">ML Engineer · Predictive Maintenance &amp; Industry 4.0</div>
-          <ul class="exp-bullets">
-            <li>Boosted fault detection accuracy by 18% via semi-supervised learning and SMOTE on sparse industrial sensor datasets.</li>
-            <li>Integrated ML solutions into live manufacturing workflows, increasing shop-floor efficiency by 20%.</li>
-            <li>Built synthetic data generation pipelines for predictive maintenance, reducing labeled data dependency by 60%.</li>
-            <li>Enhanced PySpark ETL pipelines, improving sensor data processing speed by 40% for real-time analytics.</li>
-            <li>Architected Airflow workflows ensuring reliable orchestration at 99.9% availability.</li>
+        <div class="exp-body">
+          <div class="co">WZL, RWTH Aachen University</div>
+          <div class="role">Data Scientist · Predictive Maintenance</div>
+          <ul>
+            <li>Boosted model performance by 18% via semi-supervised learning and SMOTE on sparse industrial datasets.</li>
+            <li>Engineered statistical pipelines enhancing manufacturing decision-making by 30% and shop-floor efficiency by 20%.</li>
+            <li>Applied transfer learning to improve few-shot generalization by 12% across manufacturing environments.</li>
+            <li>Developed interactive Streamlit dashboards surfacing real-time KPIs to operations stakeholders.</li>
           </ul>
-          <div class="exp-tags">
-            <span class="exp-tag">PyTorch</span><span class="exp-tag">SMOTE</span><span class="exp-tag">Semi-supervised</span><span class="exp-tag">PySpark</span><span class="exp-tag">Airflow</span><span class="exp-tag">Industry 4.0</span>
-          </div>
+          <div class="exp-tags"><span class="etag">PyTorch</span><span class="etag">SMOTE</span><span class="etag">Semi-supervised</span><span class="etag">Streamlit</span><span class="etag">Industry 4.0</span></div>
         </div>
       </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-date">
+      <div class="exp reveal">
+        <div class="exp-meta">
           <span class="period">Jun – Sep 2024</span>
-          <span class="location">Aachen, DE</span>
+          <span class="loc">Aachen, Germany</span>
         </div>
-        <div class="exp-content">
-          <div class="exp-company">IMSE, RWTH Aachen University</div>
-          <div class="exp-role">ML Research Intern · Condition Monitoring</div>
-          <ul class="exp-bullets">
-            <li>Achieved 95% accuracy with Gradient Boosting ensemble on vibration sensor data across 3+ machine categories.</li>
-            <li>Reduced unplanned machine downtime by 25% through a real-time monitoring and alerting framework.</li>
+        <div class="exp-body">
+          <div class="co">IMSE, RWTH Aachen University</div>
+          <div class="role">Data Science Intern · Condition Monitoring</div>
+          <ul>
+            <li>Built ensemble models achieving 95% accuracy via Gradient Boosting on vibration sensor data across 3+ machine categories.</li>
+            <li>Lowered unplanned downtime by 25% through a real-time condition monitoring framework.</li>
             <li>Processed 500K+ sensor readings with rigorous EDA and feature engineering, improving generalization by 35%.</li>
-            <li>Productionized Kafka-based ingestion pipelines for IoT telemetry and migrated legacy workloads to Azure Synapse (4× faster queries).</li>
           </ul>
-          <div class="exp-tags">
-            <span class="exp-tag">Gradient Boosting</span><span class="exp-tag">Kafka</span><span class="exp-tag">Azure Synapse</span><span class="exp-tag">IoT</span><span class="exp-tag">EDA</span>
-          </div>
+          <div class="exp-tags"><span class="etag">Gradient Boosting</span><span class="etag">EDA</span><span class="etag">Feature Engineering</span><span class="etag">scikit-learn</span></div>
         </div>
       </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-date">
+      <div class="exp reveal">
+        <div class="exp-meta">
           <span class="period">Jun 2023 – Jun 2024</span>
-          <span class="location">Aachen, DE</span>
+          <span class="loc">Aachen, Germany</span>
         </div>
-        <div class="exp-content">
-          <div class="exp-company">Aixigo AG</div>
-          <div class="exp-role">AI / ML Engineer · FinTech</div>
-          <ul class="exp-bullets">
-            <li>Architected a GPT-4-powered financial Q&A assistant (LangChain, FastAPI) serving live portfolio data, reducing query resolution time by 40%.</li>
+        <div class="exp-body">
+          <div class="co">Aixigo AG</div>
+          <div class="role">Data Scientist · FinTech</div>
+          <ul>
+            <li>Developed a GPT-4-powered financial Q&A assistant (LangChain, FastAPI) reducing query resolution time by 40%.</li>
             <li>Automated 70% of financial reporting via LLM orchestration, saving 20 hours per report cycle.</li>
-            <li>Reduced LLM inference latency by 30% through 4-bit quantization, response caching, and async FastAPI optimization.</li>
-            <li>Engineered PySpark and Databricks Delta Lake pipelines processing 10TB+ of financial data at 99.9% reliability.</li>
-            <li>Deployed scalable RAG services on Kubernetes maintaining &lt;300ms latency under production load.</li>
+            <li>Optimized LLM inference latency by 30% via 4-bit quantization, response caching, and async FastAPI.</li>
+            <li>Processed 10TB+ of financial data via PySpark and Databricks at 99.9% reliability.</li>
           </ul>
-          <div class="exp-tags">
-            <span class="exp-tag">GPT-4</span><span class="exp-tag">LangChain</span><span class="exp-tag">RAG</span><span class="exp-tag">PySpark</span><span class="exp-tag">Databricks</span><span class="exp-tag">Kubernetes</span><span class="exp-tag">FastAPI</span>
-          </div>
+          <div class="exp-tags"><span class="etag">GPT-4</span><span class="etag">LangChain</span><span class="etag">RAG</span><span class="etag">PySpark</span><span class="etag">Databricks</span><span class="etag">FastAPI</span></div>
         </div>
       </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-date">
+      <div class="exp reveal">
+        <div class="exp-meta">
           <span class="period">May 2016 – Jul 2020</span>
-          <span class="location">Lahore, PK</span>
+          <span class="loc">Lahore, Pakistan</span>
         </div>
-        <div class="exp-content">
-          <div class="exp-company">Hashmaker Solutions</div>
-          <div class="exp-role">Software Engineer</div>
-          <ul class="exp-bullets">
+        <div class="exp-body">
+          <div class="co">Hashmaker Solutions</div>
+          <div class="role">Software Developer</div>
+          <ul>
             <li>Delivered 10+ end-to-end client projects across frontend and backend development in production environments.</li>
             <li>Optimized SQL queries and relational schemas, improving performance of business-critical systems by 40–70%.</li>
           </ul>
-          <div class="exp-tags">
-            <span class="exp-tag">Backend</span><span class="exp-tag">SQL</span><span class="exp-tag">Data Pipelines</span>
-          </div>
+          <div class="exp-tags"><span class="etag">Backend</span><span class="etag">SQL</span><span class="etag">Full-stack</span></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section class="projects" id="projects">
-  <div class="section-inner">
-    <div class="sec-header reveal">
-      <div class="eyebrow">Technical Projects</div>
-      <h2>What I've built</h2>
-      <p>Production AI systems with real metrics. All code on GitHub.</p>
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">GitHub Projects</div>
+      <h2 class="sec-title">What I've built</h2>
+      <p class="sec-sub">Production ML systems with real metrics. All code on <a href="https://github.com/MuhammadZahidRWTH/DataScience-Projects" target="_blank" style="color:var(--gold);text-decoration:none">GitHub →</a></p>
     </div>
     <div class="projects-grid">
 
-      <div class="project-card ai-p reveal">
-        <div class="project-num">01</div>
-        <div class="project-track ai-t">AI Engineer</div>
-        <div class="project-stack">LangChain · LangGraph · OpenAI · FastAPI</div>
-        <h3>Multi-Agent AI System</h3>
-        <p>Autonomous workflow orchestration with task decomposition, tool use, and self-correcting execution loops using LangGraph agents with memory and dynamic tool routing.</p>
-        <div class="project-metrics">
-          <span class="pm ai-m">60% faster task completion</span>
-          <span class="pm ai-m">Self-correcting loops</span>
+      <div class="pcard fraud reveal">
+        <div class="pcard-accent"></div>
+        <div class="pcard-num">01</div>
+        <div class="pcard-track">ML Engineer · FinTech MLOps</div>
+        <div class="pcard-stack">Python · XGBoost · MLflow · Docker · FastAPI · Evidently AI</div>
+        <h3>End-to-End Fraud Detection System</h3>
+        <p>XGBoost classifier on highly imbalanced transaction data (2% fraud rate). SMOTE oversampling and threshold tuning delivered ROC-AUC 0.88 and 0.84 precision. Served via FastAPI at sub-10ms latency with live drift monitoring.</p>
+        <div class="pcard-pills">
+          <span class="pill fraud">ROC-AUC 0.88</span>
+          <span class="pill fraud">sub-10ms latency</span>
+          <span class="pill fraud">CI/CD · Evidently AI</span>
         </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
+        <a class="pcard-link" href="https://github.com/MuhammadZahidRWTH/DataScience-Projects" target="_blank">GitHub →</a>
       </div>
 
-      <div class="project-card ai-p reveal d1">
-        <div class="project-num">02</div>
-        <div class="project-track ai-t">AI Engineer</div>
-        <div class="project-stack">FAISS · Neural Reranking · RAGAS · FastAPI</div>
-        <h3>Production RAG System</h3>
-        <p>Enterprise document Q&A processing 10,000+ documents. Neural reranking and hybrid vector search delivering 30% higher answer quality at 95%+ uptime.</p>
-        <div class="project-metrics">
-          <span class="pm ai-m">75% less manual analysis</span>
-          <span class="pm ai-m">Sub-second responses</span>
+      <div class="pcard rag reveal d1">
+        <div class="pcard-accent"></div>
+        <div class="pcard-num">02</div>
+        <div class="pcard-track">AI Engineer · RAG Pipeline</div>
+        <div class="pcard-stack">Python · LangChain · FAISS · GPT-4</div>
+        <h3>Enterprise RAG for Compliance & Sustainability</h3>
+        <p>RAG pipeline over 10,000+ regulatory documents with neural reranking and hybrid search. Reduced manual review time by 75% and delivered a production system at 95%+ uptime with sub-second query latency.</p>
+        <div class="pcard-pills">
+          <span class="pill rag">75% less manual review</span>
+          <span class="pill rag">30% precision gain</span>
+          <span class="pill rag">Sub-second responses</span>
         </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
+        <a class="pcard-link" href="https://github.com/MuhammadZahidRWTH/DataScience-Projects" target="_blank">GitHub →</a>
       </div>
 
-      <div class="project-card ml-p reveal">
-        <div class="project-num">03</div>
-        <div class="project-track ml-t">ML Engineer</div>
-        <div class="project-stack">Python · Prophet · scikit-learn · Plotly</div>
-        <h3>Predictive Maintenance Forecaster</h3>
-        <p>Time-series models predicting machine failures 48 hours in advance with 85% precision. Interactive risk dashboard for operations teams enabling proactive scheduling.</p>
-        <div class="project-metrics">
-          <span class="pm ml-m">85% precision · 48h ahead</span>
-          <span class="pm ml-m">25% less downtime</span>
+      <div class="pcard credit reveal">
+        <div class="pcard-accent"></div>
+        <div class="pcard-num">03</div>
+        <div class="pcard-track">Data Scientist · Statistical Modelling</div>
+        <div class="pcard-stack">R · tidymodels · ggplot2 · caret</div>
+        <h3>Credit Risk Prediction</h3>
+        <p>Logistic regression and random forest models in R predicting credit default across 30,000+ customer records. Feature selection via stepwise AIC and VIF analysis. ROC curves and score distributions visualised with ggplot2.</p>
+        <div class="pcard-pills">
+          <span class="pill credit">AUC 0.87</span>
+          <span class="pill credit">30,000+ records</span>
+          <span class="pill credit">Interpretable risk scoring</span>
         </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
+        <a class="pcard-link" href="https://github.com/MuhammadZahidRWTH/DataScience-Projects" target="_blank">GitHub →</a>
       </div>
 
-      <div class="project-card ds-p reveal d1">
-        <div class="project-num">04</div>
-        <div class="project-track ds-t">Data Scientist</div>
-        <div class="project-stack">Python · XGBoost · SHAP · Plotly</div>
-        <h3>Explainable Churn Analysis</h3>
-        <p>89% recall identifying high-risk customers via XGBoost ensemble. SHAP values surfaced top 3 churn drivers, directly informing targeted retention campaigns with 40% higher conversion.</p>
-        <div class="project-metrics">
-          <span class="pm ds-m">89% recall</span>
-          <span class="pm ds-m">40% campaign uplift</span>
+      <div class="pcard nlp reveal d1">
+        <div class="pcard-accent"></div>
+        <div class="pcard-num">04</div>
+        <div class="pcard-track">NLP · Document Intelligence</div>
+        <div class="pcard-stack">Python · spaCy · Transformers · BERT</div>
+        <h3>NLP-Based Document Extractor</h3>
+        <p>End-to-end NLP pipeline for structured information extraction from unstructured documents. BERT-based field classification and named entity recognition. Modular design supports contracts, invoices, and reports.</p>
+        <div class="pcard-pills">
+          <span class="pill nlp">BERT · NER</span>
+          <span class="pill nlp">Multi-document types</span>
+          <span class="pill nlp">Production-ready</span>
         </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
+        <a class="pcard-link" href="https://github.com/MuhammadZahidRWTH/DataScience-Projects" target="_blank">GitHub →</a>
       </div>
 
-      <div class="project-card ds-p reveal">
-        <div class="project-num">05</div>
-        <div class="project-track ds-t">Data Scientist</div>
-        <div class="project-stack">LangChain · FAISS · RAG · Plotly</div>
-        <h3>ESG Compliance Analyzer</h3>
-        <p>RAG pipeline over regulatory documents for natural language ESG compliance querying. Eliminated 80% of manual reporting and delivered interactive Plotly dashboards for trend analysis.</p>
-        <div class="project-metrics">
-          <span class="pm ds-m">80% reporting effort saved</span>
-          <span class="pm ds-m">60% faster ESG analysis</span>
-        </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
-      </div>
-
-      <div class="project-card de-p reveal d1">
-        <div class="project-num">06</div>
-        <div class="project-track de-t">Data Engineer</div>
-        <div class="project-stack">PySpark · Tesseract · spaCy · Airflow</div>
-        <h3>Multilingual OCR-NLP Pipeline</h3>
-        <p>Document digitization at scale: 1M+ pages in 5 languages. Parallel execution cut latency from 45s to 8s. NER extraction layer delivers analytics-ready PostgreSQL output at 15K+ docs/day.</p>
-        <div class="project-metrics">
-          <span class="pm de-m">45s → 8s · 5.6× speed-up</span>
-          <span class="pm de-m">92% accuracy · 5 languages</span>
-        </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
-      </div>
-
-      <div class="project-card de-p reveal">
-        <div class="project-num">07</div>
-        <div class="project-track de-t">Data Engineer</div>
-        <div class="project-stack">Databricks · Delta Lake · dbt · SQL</div>
-        <h3>Financial Data Warehouse</h3>
-        <p>Star schema warehouse for 10TB+ financial data. Incremental dbt transformation pipelines processing 50K+ daily records at 99.9% reliability. Automated data quality checks eliminated 90% of manual validation.</p>
-        <div class="project-metrics">
-          <span class="pm de-m">80% faster BI reporting</span>
-          <span class="pm de-m">99.9% reliability</span>
-        </div>
-        <a class="project-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SIDE PROJECTS -->
-<section class="sideprojects" id="sideprojects">
-  <div class="section-inner">
-    <div class="sec-header reveal">
-      <div class="eyebrow">Side Projects</div>
-      <h2>Building in public</h2>
-      <p>Beyond work: shipping real products used by real people.</p>
-    </div>
-    <div class="sp-card reveal">
-      <div>
-        <div class="sp-badge">🌐 Live on Chrome Web Store</div>
-        <h3>Smarty Synonym</h3>
-        <div class="sp-sub">Chrome Extension · Vocabulary Tool · 4.8 ★ Rating</div>
-        <p>A free Chrome extension that supercharges reading and writing. Double-click any word to instantly get a definition while reading, or 6+ synonyms while writing, all without leaving the page. Zero data collection, works on any website.</p>
-        <div class="sp-features">
-          <span class="sp-feat">Double-click any word</span>
-          <span class="sp-feat">6+ instant synonyms</span>
-          <span class="sp-feat">Built-in dictionary</span>
-          <span class="sp-feat">One-click word replacement</span>
-          <span class="sp-feat">Zero data collection</span>
-          <span class="sp-feat">Works on any site</span>
-        </div>
-        <div class="sp-links">
-         
-        </div>
-      </div>
-      <div class="sp-right">
-        <div class="sp-stat">
-          <div class="sp-stat-num">4.8<span>★</span></div>
-          <div class="sp-stat-label">Chrome Web Store rating</div>
-        </div>
-        <div class="sp-stat">
-          <div class="sp-stat-num">6<span>+</span></div>
-          <div class="sp-stat-label">Synonyms per word</div>
-        </div>
-        <div class="sp-demo">
-          <div class="sp-demo-label">✍️ Live demo</div>
-          <div class="sp-demo-text">The report was <span class="sp-demo-hl">important</span> for Q3 review.</div>
-          <div class="sp-chips">
-            <span class="sp-chip">crucial</span>
-            <span class="sp-chip">pivotal</span>
-            <span class="sp-chip">vital</span>
-            <span class="sp-chip">essential</span>
-            <span class="sp-chip">critical</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- EDUCATION -->
 <section class="education" id="education">
-  <div class="section-inner">
-    <div class="sec-header reveal">
-      <div class="eyebrow">Education &amp; Certifications</div>
-      <h2>Academic background</h2>
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Education & Certifications</div>
+      <h2 class="sec-title">Academic background</h2>
     </div>
     <div class="edu-grid">
       <div class="edu-card reveal">
         <div class="edu-icon">🎓</div>
         <h3>M.Sc. in Data Science</h3>
         <div class="edu-school">RWTH Aachen University</div>
-        <div class="edu-year">Aachen, Germany · 2020 – 2025</div>
-        <p>Thesis: Semi-supervised ML benchmarking for Industry 4.0 quality assurance: 5+ classifiers across 10%–99% unlabeling rates, retaining up to 90% of fully-supervised accuracy via pseudo-labeling, SMOTE, and self-training. Extending toward peer-reviewed publication.<br/><br/>Key modules: Machine Learning, Deep Learning, Reinforcement Learning, Database Systems.</p>
+        <div class="edu-year">Aachen, Germany · 2022 – 2025</div>
+        <p><strong style="color:var(--text);font-weight:500">Thesis (Grade 1.7):</strong> Semi-supervised ML benchmarking for Industry 4.0 — 5+ classifiers across 10%–99% unlabeling rates, retaining up to 90% of fully-supervised accuracy via pseudo-labeling, SMOTE, and self-training.<br/><br/>Key modules: Machine Learning · Deep Learning · Reinforcement Learning · Database Systems</p>
       </div>
       <div class="edu-card reveal d1">
         <div class="edu-icon">🎓</div>
         <h3>B.Sc. in Computer Science (Dual Degree)</h3>
-        <div class="edu-school">COMSATS University &amp; Lancaster University (UK)</div>
+        <div class="edu-school">COMSATS University & Lancaster University (UK)</div>
         <div class="edu-year">Pakistan / United Kingdom · 2011 – 2015</div>
-        <p>Dual-degree programme combining AI, algorithms, and software engineering curriculum across two international institutions.<br/><br/>Key modules: Artificial Intelligence, Algorithm Analysis, DBMS, Software Engineering.</p>
+        <p>Dual-degree programme combining AI, algorithms, and software engineering curriculum across two international institutions.<br/><br/>Key modules: Artificial Intelligence · Algorithm Analysis · DBMS · Software Engineering</p>
       </div>
     </div>
-    <div class="certs-grid">
-      <div class="cert-card reveal">
-        <div class="cert-icon">🏅</div>
-        <div class="cert-info">
-          <h4>MLOps &amp; Engineering · ML Pipeline Orchestration &amp; Model Deployment</h4>
-          <div class="cert-issuer">Microsoft</div>
-          <div class="cert-date">July 2025</div>
-        </div>
-      </div>
-      <div class="cert-card reveal d1">
-        <div class="cert-icon">🏅</div>
-        <div class="cert-info">
-          <h4>Azure ML Studio · ML Pipeline &amp; Model Deployment</h4>
-          <div class="cert-issuer">Microsoft</div>
-          <div class="cert-date">June 2024</div>
-        </div>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon">🏅</div>
-        <div class="cert-info">
-          <h4>RAG-based Financial Agent Development · Applied LLM Workshop</h4>
-          <div class="cert-issuer">Aixigo AG</div>
-          <div class="cert-date">February 2024</div>
-        </div>
-      </div>
-      <div class="cert-card reveal d1">
-        <div class="cert-icon">🏅</div>
-        <div class="cert-info">
-          <h4>Master SQL · Advanced Querying for Data Science</h4>
-          <div class="cert-issuer">Udemy</div>
-          <div class="cert-date">June 2022</div>
-        </div>
-      </div>
+    <div class="certs">
+      <div class="cert reveal"><div class="cert-ico">🏅</div><div><h4>MLOps & Engineering · ML Pipeline Orchestration & Model Deployment</h4><div class="cert-iss">Microsoft</div><div class="cert-dt">July 2025</div></div></div>
+      <div class="cert reveal d1"><div class="cert-ico">🏅</div><div><h4>Azure ML Studio · ML Pipeline & Model Deployment</h4><div class="cert-iss">Microsoft</div><div class="cert-dt">June 2024</div></div></div>
+      <div class="cert reveal"><div class="cert-ico">🏅</div><div><h4>RAG-based Financial Agent Development · Applied LLM Workshop</h4><div class="cert-iss">Aixigo AG</div><div class="cert-dt">February 2024</div></div></div>
+      <div class="cert reveal d1"><div class="cert-ico">🏅</div><div><h4>Master SQL · Advanced Querying for Data Science</h4><div class="cert-iss">Udemy</div><div class="cert-dt">June 2022</div></div></div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="section-inner">
-    <div class="eyebrow reveal">Contact</div>
-    <h2 class="reveal">Let's build something together.</h2>
-    <p class="contact-sub reveal">Open to AI Engineer, ML Engineer, Data Scientist, and Data Engineer roles across Germany. Authorized to work. Open to relocation.</p>
-    <div class="open-to reveal">
-      <span class="open-chip">🏙️ Munich</span>
-      <span class="open-chip">🏙️ Berlin</span>
-      <span class="open-chip">🏙️ Hamburg</span>
-      <span class="open-chip">🏙️ Frankfurt</span>
-      <span class="open-chip">🏙️ Cologne</span>
-      <span class="open-chip">🏙️ Düsseldorf</span>
-      <span class="open-chip">🏙️ Stuttgart</span>
-      <span class="open-chip">🌐 Remote Germany</span>
+  <div class="contact-glow"></div>
+  <div class="inner">
+    <div class="sec-label reveal">Contact</div>
+    <h2 class="reveal">Let's build something<br/><em>together.</em></h2>
+    <p class="contact-sub reveal">Open to Data Scientist, ML Engineer, and AI Engineer roles across Germany. Authorized to work. Open to relocation.</p>
+    <div class="open-chips reveal">
+      <span class="oc">🏙️ Munich</span><span class="oc">🏙️ Berlin</span><span class="oc">🏙️ Hamburg</span><span class="oc">🏙️ Frankfurt</span><span class="oc">🏙️ Cologne</span><span class="oc">🏙️ Düsseldorf</span><span class="oc">🌐 Remote Germany</span>
     </div>
     <div class="contact-links reveal">
-      <a class="contact-link primary" href="mailto:muh.zahidsaeed@gmail.com">✉️ muh.zahidsaeed@gmail.com</a>
-      <a class="contact-link" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub</a>
-      <a class="contact-link" href="https://www.linkedin.com/in/muhammad-zahid-772206258/" target="_blank">LinkedIn</a>
+      <a class="clink primary" href="mailto:muh.zahidsaeed@gmail.com">✉️ muh.zahidsaeed@gmail.com</a>
+      <a class="clink" href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub</a>
+      <a class="clink" href="https://www.linkedin.com/in/muhammad-zahid-772206258/" target="_blank">LinkedIn</a>
     </div>
-    <div class="contact-note reveal"> Aachen, Germany · Open to relocation</div>
+    <div class="contact-note reveal">Aachen, Germany · Open to relocation</div>
   </div>
 </section>
 
 <footer>
-  <p>Muhammad Zahid · AI · ML · Data Engineer
+  <p>Muhammad Zahid · Data Scientist · ML Engineer · <a href="https://github.com/MuhammadZahidRWTH" target="_blank">GitHub</a></p>
+</footer>
 
 <script>
 const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-const tabs = document.querySelectorAll('.role-tab');
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-  });
-});
 </script>
 </body>
 </html>
